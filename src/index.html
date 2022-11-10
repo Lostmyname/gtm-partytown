@@ -67,9 +67,19 @@
     setTimeout(() => {
       dataLayer.push({
         event: 'addedVariables',
-        test2: 'mockdata2',
+        test2: 'mockdata pushed from main',
       })
-    }, 3000);
+    }, 2000);
+  </script>
+  <script type="text/partytown">
+    // faux api call
+    setTimeout(() => {
+      // standard GTM DL push
+      dataLayer.push({
+        event: 'addedVariables',
+        test2: 'mockdata pushed in PT',
+      })
+    }, 4000);
   </script>
 </body>
 </html>
